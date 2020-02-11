@@ -14,6 +14,8 @@
     <modules>
         <module>example-eureka-server</module>
         <module>example-eureka-client</module>
+        <module>example-feign-client</module>
+        <module>swegger2-mvc-demo</module>
     </modules>
 
 
