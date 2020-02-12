@@ -21,12 +21,12 @@ public class HelloFeignController {
     @Autowired
     private HelloSelfFeginService helloSelfFeginService;
 
-    //http://localhost:8080/search/github?str=spring-cloud-dubbo
+    //http://localhost:8083/search/github?str=spring-cloud-dubbo
     @GetMapping(value = "search/github")
     public String searchGithubRepoByStr(@RequestParam("str") String queryStr) {
         return helloFeignService.searchRepo(queryStr);
     }
-    // http://localhost:8080/self/say
+    // http://localhost:8083/self/say
     @GetMapping(value = "self/say")
     public String selfSay() {
         return helloSelfFeginService.say();

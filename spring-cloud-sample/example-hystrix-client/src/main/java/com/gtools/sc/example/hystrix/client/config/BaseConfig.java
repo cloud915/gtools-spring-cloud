@@ -1,4 +1,4 @@
-package com.gtools.sample.feign.client.config;
+package com.gtools.sc.example.hystrix.client.config;
 
 import com.netflix.hystrix.contrib.metrics.eventstream.HystrixMetricsStreamServlet;
 import org.springframework.boot.web.servlet.ServletRegistrationBean;
@@ -8,10 +8,10 @@ import org.springframework.context.annotation.Configuration;
 /**
  * @Description
  * @Author ghy
- * @Date 2020/2/10 15:52
+ * @Date 2020/2/12 11:45
  */
 @Configuration
-public class HelloFeignServiceConfig {
+public class BaseConfig {
 
     // 定义servlet-mapping
     @Bean

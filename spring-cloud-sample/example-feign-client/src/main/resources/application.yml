@@ -7,3 +7,9 @@
 #    response:
 #      enabled: true
 #
+server:
+  port: 8083
+
+feign:
+  hystrix:
+    enabled: true

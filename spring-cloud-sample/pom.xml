@@ -16,8 +16,22 @@
         <module>example-eureka-client</module>
         <module>example-feign-client</module>
         <module>swegger2-mvc-demo</module>
+        <module>example-hystrix-client</module>
     </modules>
 
 
-
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
+                <version>${spring.cloud.component.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+                <version>${spring.cloud.component.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 </project>
