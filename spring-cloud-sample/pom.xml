@@ -17,6 +17,8 @@
         <module>example-feign-client</module>
         <module>swegger2-mvc-demo</module>
         <module>example-hystrix-client</module>
+        <module>example-ribbon-client</module>
+        <module>example-zuul-client</module>
     </modules>
 
 
@@ -30,6 +32,11 @@
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+                <version>${spring.cloud.component.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-netflix-zuul</artifactId>
                 <version>${spring.cloud.component.version}</version>
             </dependency>
         </dependencies>

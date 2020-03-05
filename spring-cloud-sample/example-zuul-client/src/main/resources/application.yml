@@ -1,0 +1,22 @@
+spring:
+  application:
+    name:zuul-api-gateway
+server:
+  port: 8085
+eureka:
+  instance:
+    hostname: gateway
+  client:
+    service-url:
+      defaultZone: http://localhost:8100/eureka/
+
+#http://localhost:8085/kkkkk/hello/say 等价于 http://localhost:8085/ETC-8081/hello/say 转发到 http://localhost:8081/hello/say
+zuul:
+  routes:
+    kk: # 可以随意些，在zuul中唯一即可；当这个值等于serviceId时，可以不写
+      path: /kkkkk/** # 想要映射到的路径
+      service-id: ETC-8081 # 真实的eureka中的serviceId
+  ignored-services: ETC-8081-xxx # 忽略某个服务
+    movie:
+      path: /mo/**
+      url: http://localhost:8011/ # 直接指定url，而不经过eureka，类似dubbo的直连
